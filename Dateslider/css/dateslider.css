@@ -61,9 +61,8 @@ div#shiftpanel {
 	top:3px;
 	position:absolute;
 	height:20px;
-	background-color:#0000FF;	
-	filter:alpha(opacity=50);
-	-moz-opacity:.5;
+	background-color: rgba(00, 00, 100, 50);	
+	opacity:.5;
 	opacity:.5;
 	z-index:0;
 }
@@ -72,11 +71,10 @@ div.zoomPanel {
 	width:92px;
 	position:absolute;
 	height:12px;
-	background-color:#FFF;
+	background-color: rgba(100, 100, 100, 85);
 	right:0px;
 	top:0px;
 	opacity:.85;
-	filter:alpha(opacity=85);
 	border:1px solid #EEE;
 	border-width:0px 0px 1px 1px;
 	font-size:10px;
