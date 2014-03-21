@@ -1,0 +1,49 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" href="css/dateslider.css" type = "text/css" />
+<style type = "text/css">
+label {
+	width:150px;
+}
+
+input {
+	border:1px solid #000;
+	font-size:.7em;
+}
+
+</style>
+</head>	
+<body>
+<h3>Slider</h3>
+<div id = "slider-container">
+	<div id = "sliderbar"></div>
+</div><br />
+<form>
+<label for = "datestart">Start:</label>  <input type = "text" id = "datestart">
+<label for = "dateend">End:</label>  <input typde = "text" id = "dateend">
+</form>
+
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,dragdrop"></script>
+
+<script type="text/javascript" src="js/date-en-US.js"></script>
+<script type="text/javascript" src="js/dateslider.js"></script>
+
+<script language = "javascript">	
+
+l_oOptions = {
+	dragHandles:true,
+	dayWidth: 1,
+	dateFormat : 'MMMM d, yyyy'
+}
+
+p_oDateSlider = new DateSlider('sliderbar', '2008-May-01', '2008-May-31', 2007, 2009, l_oOptions);	
+p_oDateSlider.attachFields($('datestart'), $('dateend'));
+
+</script>
+</body>
+</html>
+

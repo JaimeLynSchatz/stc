@@ -1,0 +1,95 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" href="css/dateslider.css" type = "text/css" />
+<style type = "text/css">
+
+body {
+	font-family:arial;
+}
+
+input {
+	border:1px solid #000;
+	font-size:.7em;
+}
+
+form#dates fieldset#datefields {
+	border:0px;
+	background-color:#EEEEEE;
+}
+
+form#dates fieldset#datefields label {
+	font-size:.9em;
+	width:50px;
+	float:left;
+}
+form#dates fieldset#datefields input {
+	width:65px;
+	float:left;
+}
+
+h1 {
+	font-size:1em;
+}
+
+#slider-container {
+	margin-left:50px;
+}
+
+</style>
+</head>	
+<body>
+<h1>Choose your dates!!</h1>
+<form id = "dates">
+	<fieldset id = "datefields">
+		<label for = "datestart">Start:</label>  <input type = "text" id = "datestart"><br />		
+		<label for = "dateend">End:</label>  <input typde = "text" id = "dateend"><br />
+		<div id = "slider">
+			<div id = "slider-container">
+				<div id = "sliderbar"></div>
+			</div>			
+		</div>
+		<div>
+			<input type = "button" id = "zoomin" value = "zoom in" />
+			<input type = "button" id = "zoomout" value = "zoom out" />
+		</div>
+	</fieldset>
+</form>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,dragdrop"></script>
+<script type="text/javascript" src="js/date-en-US.js"></script>
+<script type="text/javascript" src="js/dateslider.js"></script>
+
+<script language = "javascript">	
+
+/* Dateslider options */
+l_oOptions = {
+	dragHandles:true,
+	dayWidth: 1,
+	dateFormat : 'MM-d-yyyy'
+}
+
+/* Create the dateslider */
+p_oDateSlider = new DateSlider('sliderbar', '2008-May-01', '2008-May-31', 2007, 2009, l_oOptions);	
+p_oDateSlider.attachFields($('datestart'), $('dateend'));
+
+/* Show the dateslider onfocus */
+[$('datestart'), $('dateend')].each(function(e) {
+	e.observe('focus', function() {
+		
+	}); // end focus
+}); // end each
+
+$('zoomin').observe('click', function(ev) {
+	p_oDateSlider.zoomIn();	
+});
+
+$('zoomout').observe('click', function(ev) {
+	p_oDateSlider.zoomOut();	
+});
+</script>
+</body>
+</html>
+
