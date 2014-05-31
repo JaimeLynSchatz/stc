@@ -1,75 +1,72 @@
+
+<!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
-  <style type="text/css">
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <style type="text/css">
 
-    #slider-wrapper {
-      position: relative;
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 
-      margin: 20px auto;
-      width: 500px;
-      font-size: 30px;
-      text-align: center;
-    }
-
-    #slider-wrapper > [data-step] {
-      margin-bottom: 5px;
-      width: 70px;
-
-      font-size: 30px;
-      text-align: center;
-    }
+#slider-wrapper {
+    position: relative;
     
-    #slider-wrapper > [data-step="year"] {
-      width: 150px;
-    }
+    margin: 20px auto;
+    width: 500px;
+    font-size: 30px;
+    text-align: center;
+}
 
-    .ticker-nub-outer {
-      position: absolute;
-      width: 80px;
-      height: 10px;
+#slider-wrapper > [data-step] {
+    margin-bottom: 5px;
+    width: 70px;
+    
+    font-size: 30px;
+    text-align: center;
+}
 
-      background: rgba(0,0,0,0.5);
-      border-radius: 5px;
-    }
+#slider-wrapper > [data-step="year"] {
+    width: 150px;
+}
 
-    .ticker-nub {
-      position: relative;
-      top: -4px;
+.ticker-nub-outer {
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
 
-      width: 20px;
-      height: 16px;
+.ticker-nub {
+    position: relative;
+    top: -4px;
+    
+    width: 20px;
+    height: 16px;
+    
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
+    /*transition: left 0.2s;*/
+}
 
-      border-radius: 5px;
-      background: rgba(255,255,255,0.5);
-      border: 1px solid rgba(0,0,0,0.5);
-      /* transition: left 0.2s; */
-    }
     </style>
 </head>
 <body>
-	<div id="slider-wrapper">
-		<input data-step="year" value="2014">
-		<span>-</span>
-		<input data-step="month" value="1">
-		<span>-</span>
-		<input data-step="day" value="1">
-		<div class="ticker-nub-outer" style="left: 110px;">
-		<div class="ticker-nub" style="left: 20px;"></div>
-	</div>
-	<div class="ticker-nub-outer" style="left: 250px;">
-		<div class="ticker-nub" style="left: 29px;"></div>
-	</div>
-	<div class="ticker-nub-outer" style="left: 350px;">
-		<div class="ticker-nub" style="left: 29px;"></div>
-	</div>	
-		<script src="slider.js"></script>
-		<script src="main.js"></script>
+    <div id="slider-wrapper">
+        <input data-step="year" value="2014" />
+        <span>-</span>
+        <input data-step="month" value="1" />
+        <span>-</span>
+        <input data-step="day" value="1" />
+    </div>
+    
+    <script src="slider.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
