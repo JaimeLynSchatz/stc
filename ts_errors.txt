@@ -1,0 +1,11 @@
+"in ts_main, document ready, about to try slider-wrapper" ts_main.js:24
+"in ts_slider, top of TimeSlider function" ts_slider.js:59
+"this.$outer is " {0: <div>, length: 1, prevObject: Object, context: undefined} ts_slider.js:76
+"the input is: " {0: <input>, context: <input>, length: 1} ts_slider.js:152
+"in ts_slider, top of TimeSlider function" ts_slider.js:59
+"this.$outer is " {0: <div>, length: 1, prevObject: Object, context: undefined} ts_slider.js:76
+"the input is: " {0: <input>, context: <input>, length: 1} ts_slider.js:152
+"in ts_slider, top of TimeSlider function" ts_slider.js:59
+"this.$outer is " {0: <div>, length: 1, prevObject: Object, context: undefined} ts_slider.js:76
+"the input is: " {0: <input>, context: <input>, length: 1} ts_slider.js:152
+"in ts_slider, document ready"
