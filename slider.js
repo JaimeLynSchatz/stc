@@ -137,6 +137,7 @@ TimeSlider.prototype.getOpt = function(name, defVal) {
 }
 
 // Aligns each slider with its input box
+// TODO: uncover why this breaks with new css
 TimeSlider.prototype.reposition = function() {
     var $input = this.$input,
         parentCenter = $input.position().left + ($input.outerWidth() / 2),
